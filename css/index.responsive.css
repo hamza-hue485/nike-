@@ -1,0 +1,112 @@
+/*350*/
+@media (max-width : 1300px) {
+    
+   nav.navbar .container .navbar-toggler{
+    border-color: var(--main-color);
+}
+nav.navbar .container .navbar-toggler:focus{
+       box-shadow: -3px 3px 5px var(--main-color)
+   }
+   nav.navbar .navbar-collapse{
+       background: #ADA996; 
+       background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+       background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    }
+nav.navbar .container > a {
+    width: 15%;
+}
+ header #SC-carousel .SC-innerCarousel .part1 {
+        align-self: end;
+    }
+    header #SC-carousel .SC-innerCarousel .part2 >* img{
+        width: 70%;
+    }
+    header #SC-carousel .SC-innerCarousel.active .part2 img:first-child {
+        transform: translate(0%, -10%);
+    }
+    header #SC-carousel button {
+    bottom: 50px;
+}
+header #SC-carousel button.prev {
+    left: initial;
+    right: 70px;
+}
+
+#Featured .content .product {
+    max-width: 280px;
+    margin-inline: auto;
+}
+
+.popup.active {
+    display: block;
+}
+.popup.detail .box {
+    margin: 20px auto;
+}
+}
+/*450*/
+@media (min-width: 371px) and (max-width : 1300px) {
+    header #SC-carousel .SC-innerCarousel .part1 {
+        align-self: end;
+        margin-top: 25px;
+    }
+}
+/*650*/
+@media (min-width: 577px) and (max-width : 1300px) {
+.popup.active {
+    display: flex;
+}
+.popup.detail .box {
+    margin: initial initial;
+}
+}
+/*850*/
+@media (min-width: 769px) and (max-width : 1300px) {
+    nav.navbar .container > a {
+        width: 12%;
+    }
+    header #SC-carousel .SC-innerCarousel .part1 {
+        align-self: initial;
+        margin-top: initial;
+    }
+    header #SC-carousel .SC-innerCarousel .part2 >* img {
+        width: initial;
+    }
+    header #SC-carousel .SC-innerCarousel.active .part2 img:first-child {
+        transform: translate(-15%, -10%);
+    }
+    
+}
+/*1050*/
+@media (min-width: 992px) and (max-width : 1300px) {
+    nav.navbar .container > a {
+        width: 8%;
+    }
+    nav.navbar .navbar-collapse{ 
+    background: initial;
+}
+    header #SC-carousel .SC-innerCarousel.active .part2 img:first-child {
+        transform: translate(-20%, -10%);
+    }
+    header #SC-carousel .SC-innerCarousel.active .part2 img:last-child {
+        width: 90%;
+    }
+    #Featured .content .product {
+        max-width: initial;
+        margin-inline: initial;
+    }
+}
+/*1250*/
+@media (min-width: 1181px) and (max-width : 1300px) {
+    header #SC-carousel .SC-innerCarousel.active .part2 img:last-child {
+    width: initial;
+    }
+    header #SC-carousel button {
+        bottom: 45%;
+    }
+    header #SC-carousel button.prev {
+        left: 20px;
+        right: initial;
+    }
+    
+}
