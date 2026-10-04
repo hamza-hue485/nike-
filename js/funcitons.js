@@ -1,4 +1,5 @@
-function moveSlide(direction){
+function moveSlide(direction, that){
+        if(that.classList.contains("active") ) return ;
         let activeEl = scCarousel.querySelector(".active"),
         currentIndex = Array.from(slides).indexOf(activeEl),
         newIndex = (currentIndex + direction + slides.length) % slides.length,
@@ -8,13 +9,7 @@ function moveSlide(direction){
     changeMainColor(imgName);
     updateImg(imgName, navImg, "logo");
     getNikeImg(imgName);
-    updateImg(imgName, iconEle, "logo")     
-};
-function toNext() {
-    moveSlide(1);
-};
-function toPrev() { 
-    moveSlide(-1);
+    updateImg(imgName, iconEle, "logo");     
 };
 function changeMainColor(colorName){
     let html = document.documentElement,
@@ -45,17 +40,16 @@ function ScrollNav(){
     };
 };
 function scrollToSection(navLink, e){
+    e.preventDefault();
     let activeLink = navEl.querySelector(".nav-link.active"),
         currentNameId = navLink.getAttribute("href"),
         currentSection = document.querySelector(currentNameId);
-        e.preventDefault();
-        scrollTo(0, currentSection.offsetTop - navEl.clientHeight);
-        console.log(activeLink, navLink)
+        scrollTo(0, currentSection.offsetTop - navEl.clientHeight + 5);
         replaceActive(activeLink, navLink);
 };
 function updateNavLink(sectionName){
     let section = document.querySelector(`#${sectionName}`); 
-    if(window.scrollY > section.offsetTop   && window.scrollY < section.offsetTop + section.clientHeight){
+    if(window.scrollY > section.offsetTop - navEl.clientHeight && window.scrollY < section.offsetTop + section.clientHeight){
         let sectionId = section.getAttribute("id"),
             navLinkOfSection = document.querySelector(`a[href="#${sectionId}"]`),
             activeLink = navEl.querySelector(".nav-link.active");

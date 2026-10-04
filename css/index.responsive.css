@@ -13,7 +13,7 @@ nav.navbar .container .navbar-toggler:focus{
        background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     }
 nav.navbar .container > a {
-    width: 15%;
+    width: 18%;
 }
  header #SC-carousel .SC-innerCarousel .part1 {
         align-self: end;
@@ -30,6 +30,10 @@ nav.navbar .container > a {
 header #SC-carousel button.prev {
     left: initial;
     right: 70px;
+}
+#Latest .content .product{
+    max-width: 350px;
+    margin-inline: auto;
 }
 
 #Featured .content .product {
@@ -53,12 +57,16 @@ header #SC-carousel button.prev {
 }
 /*650*/
 @media (min-width: 577px) and (max-width : 1300px) {
-.popup.active {
-    display: flex;
-}
-.popup.detail .box {
-    margin: initial initial;
-}
+    .popup.active {
+        display: flex;
+    }
+    .popup.detail .box {
+        margin: initial initial;
+    }
+    #Latest .content .product{
+        max-width: initial;
+        margin-inline: initial;
+    }
 }
 /*850*/
 @media (min-width: 769px) and (max-width : 1300px) {

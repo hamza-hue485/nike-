@@ -18,8 +18,12 @@ let scCarousel = document.getElementById("SC-carousel"),
     cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
   }; 
  ScrollNav();
- nextBtn.addEventListener("click",toNext);
- prevBtn.addEventListener("click",toPrev);
+ nextBtn.addEventListener("click",function(){
+  moveSlide(1, this)
+ });
+ prevBtn.addEventListener("click",function(){
+  moveSlide(-1, this)
+ });
  navLinks.forEach(function(navLink){
     navLink.addEventListener("click", function(e){
        scrollToSection(navLink, e);
