@@ -215,6 +215,7 @@ header #SC-carousel button.next {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: initial;
 }
 #Latest .product .part2 .item > *:not(:last-child){
     margin-bottom: 15px;
